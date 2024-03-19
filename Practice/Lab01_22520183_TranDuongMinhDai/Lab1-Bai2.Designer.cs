@@ -1,6 +1,6 @@
 ﻿namespace Lab01_22520183_TranDuongMinhDai
 {
-    partial class Lab2_Bai2
+    partial class Lab1_Bai2
     {
         /// <summary>
         /// Required designer variable.
@@ -97,38 +97,42 @@
             // 
             // clear
             // 
+            clear.BackColor = SystemColors.GradientActiveCaption;
             clear.Location = new Point(341, 194);
             clear.Name = "clear";
             clear.Size = new Size(96, 37);
             clear.TabIndex = 6;
             clear.Text = "Xóa";
-            clear.UseVisualStyleBackColor = true;
+            clear.UseVisualStyleBackColor = false;
             clear.Click += clear_Click;
             // 
             // exit
             // 
+            exit.BackColor = SystemColors.GradientActiveCaption;
             exit.Location = new Point(515, 194);
             exit.Name = "exit";
             exit.Size = new Size(107, 37);
             exit.TabIndex = 7;
             exit.Text = "Thoát";
-            exit.UseVisualStyleBackColor = true;
+            exit.UseVisualStyleBackColor = false;
             exit.Click += exit_Click;
             // 
             // find
             // 
+            find.BackColor = SystemColors.GradientActiveCaption;
             find.Location = new Point(165, 194);
             find.Name = "find";
             find.Size = new Size(104, 37);
             find.TabIndex = 8;
             find.Text = "Tìm";
-            find.UseVisualStyleBackColor = true;
+            find.UseVisualStyleBackColor = false;
             find.Click += find_Click;
             // 
             // max_textbox
             // 
             max_textbox.Location = new Point(149, 311);
             max_textbox.Name = "max_textbox";
+            max_textbox.ReadOnly = true;
             max_textbox.Size = new Size(120, 27);
             max_textbox.TabIndex = 9;
             // 
@@ -136,6 +140,7 @@
             // 
             min_textbox.Location = new Point(497, 315);
             min_textbox.Name = "min_textbox";
+            min_textbox.ReadOnly = true;
             min_textbox.Size = new Size(125, 27);
             min_textbox.TabIndex = 10;
             // 
@@ -184,7 +189,7 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Kết quả";
             // 
-            // Lab2_Bai2
+            // Lab1_Bai2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -199,8 +204,8 @@
             Controls.Add(textBox1);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
-            Name = "Lab2_Bai2";
-            Text = "Lab2_Bai2";
+            Name = "Lab1_Bai2";
+            Text = "Lab1_Bai2";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

@@ -12,9 +12,9 @@ using System.Windows.Forms.VisualStyles;
 
 namespace Lab01_22520183_TranDuongMinhDai
 {
-    public partial class Lab2_Bai2 : Form
+    public partial class Lab1_Bai2 : Form
     {
-        public Lab2_Bai2()
+        public Lab1_Bai2()
         {
             InitializeComponent();
         }
@@ -30,23 +30,29 @@ namespace Lab01_22520183_TranDuongMinhDai
         {
             this.Close();
         }
-        
+     
         private void find_Click(object sender, EventArgs e)
         {
-            
-            
-            if(double.TryParse(textBox1.Text.Trim(),out double num1)&&
-               double.TryParse(textBox2.Text.Trim(),out double num2)&&
-               double.TryParse(textBox3.Text.Trim(),out double num3))
+
+            if (string.IsNullOrEmpty(textBox1.Text)&&string.IsNullOrEmpty(textBox2.Text)&&string.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("Vui lòng nhập một số!");
+                return;
+            }
+            if (float.TryParse(textBox1.Text.Trim(),out float num1)&&
+               float.TryParse(textBox2.Text.Trim(),out float num2)&&
+               float.TryParse(textBox3.Text.Trim(),out float num3)
+               )
             {
 
-                double max = Math.Max(Math.Max(num1, num2), num3);
-                string max_format = string.Format("", max);
-                max_textbox.Text = max_format.ToString();
+                float max = Math.Max(Math.Max(num1, num2), num3);
+                float min = Math.Min(Math.Min(num1,num2),num3);
+                max_textbox.Text = max.ToString();
+                min_textbox.Text = min.ToString();
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập số nguyên hoặc số thực!");
+                MessageBox.Show("Vui lòng nhập số nguyên hoặc số thực!", "Thông báo", MessageBoxButtons.OK);
             }
         }
 

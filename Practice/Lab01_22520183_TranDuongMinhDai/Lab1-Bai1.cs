@@ -20,7 +20,11 @@ namespace Lab01_22520183_TranDuongMinhDai
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng nhập một số!");
+                return;
+            }
             if (Int32.TryParse(textBox1.Text.Trim(), out int num1) && Int32.TryParse(textBox2.Text.Trim(), out int num2))
             {
                 try
@@ -34,13 +38,13 @@ namespace Lab01_22520183_TranDuongMinhDai
                 }
                 catch(OverflowException ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Xảy ra lỗi overflow!");
                 }
                 
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập 2 số nguyên!");
+                MessageBox.Show("Vui lòng nhập 2 số nguyên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -61,6 +65,11 @@ namespace Lab01_22520183_TranDuongMinhDai
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng nhập một số!");
+                return;
+            }
             if (Int32.TryParse(textBox1.Text.Trim(), out int num1) && Int32.TryParse(textBox2.Text.Trim(), out int num2))
             {
                 int sub;
@@ -75,6 +84,12 @@ namespace Lab01_22520183_TranDuongMinhDai
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng nhập một số!");
+                return;
+            }
             if (Int32.TryParse(textBox1.Text.Trim(), out int num1) && Int32.TryParse(textBox2.Text.Trim(), out int num2))
             {
                 try
@@ -99,6 +114,12 @@ namespace Lab01_22520183_TranDuongMinhDai
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Vui lòng nhập một số!");
+                return;
+            }
             if (Int32.TryParse(textBox1.Text.Trim(), out int num1) && Int32.TryParse(textBox2.Text.Trim(), out int num2))
             {
                 float div;
